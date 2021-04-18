@@ -7,3 +7,5 @@ it is easily adaptable to any language Common Voice supports by setting the vari
 participants need to be enrolled by adding their names to the `enrolledContributors` list in `enrolledContributors.py`
 
 the `run.sh` is periodically run to update the website. The `init.sh` is a rough guide how to setup the git repository the webpage will be pushed to. It's currently hosted on github pages.
+
+currently hosted at 54696d21.github.io/commonVoiceGermanCompetiton
