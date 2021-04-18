@@ -8,4 +8,4 @@ participants need to be enrolled by adding their names to the `enrolledContribut
 
 the `run.sh` is periodically run to update the website. The `init.sh` is a rough guide how to setup the git repository the webpage will be pushed to. It's currently hosted on github pages.
 
-currently hosted at 54696d21.github.io/commonVoiceGermanCompetiton
+currently hosted at https://54696d21.github.io/commonVoiceGermanCompetiton
