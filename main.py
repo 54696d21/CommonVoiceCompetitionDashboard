@@ -71,12 +71,12 @@ def writeWebsite(sortedContribList):
     FOLDER = 'website'
     with open(f"{FOLDER}/index.html", "w") as htmlout:
         htmlout.write(HTML1)
-        htmlout.write(HTML2)
 
         for idx, contributor in enumerate(sortedContribList):
             htmlout.write(
-                f"<li>{idx+1}. {contributor.username}\t\t{contributor.competitionScore}</li>\n")
+                f"<li>{idx+1}. {contributor.username} | {contributor.competitionScore} Punkte</li>\n")
 
+        htmlout.write(HTML2)
         htmlout.write(HTML3)
 
 
