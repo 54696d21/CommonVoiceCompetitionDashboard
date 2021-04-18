@@ -49,8 +49,8 @@ class Data:
 
 
 def writeWebsite(sortedContribList):
-    utcnow = datetime.datetime.utcnow()
-    date_time = utcnow.strftime("%d.%m.%y %H:%M")
+    now = datetime.datetime.now()
+    date_time = now.strftime("%d.%m.%y %H:%M")
     HTML1 = """<!DOCTYPE html>
     <html lang="de">
     <head>
@@ -65,7 +65,7 @@ def writeWebsite(sortedContribList):
     </body>
     </html>"""
     HTML3 = f"""<footer>
-    <p>last updated: {date_time} UTC</p>
+    <p>zuletzt aktualisiert: {date_time} MESZ</p>
     </footer>"""
 
     FOLDER = 'website'
@@ -75,7 +75,7 @@ def writeWebsite(sortedContribList):
 
         for idx, contributor in enumerate(sortedContribList):
             htmlout.write(
-                f"<li>{idx+1}. {contributor.username} {contributor.competitionScore}</li>\n")
+                f"<li>{idx+1}. {contributor.username}\t\t{contributor.competitionScore}</li>\n")
 
         htmlout.write(HTML3)
 
