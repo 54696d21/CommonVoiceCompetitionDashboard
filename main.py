@@ -1,9 +1,9 @@
+# import os
+# import logging
+# import time
 import requests
 import json
 import datetime
-import os
-import logging
-import time
 from Contributor import Contributor
 from enrolledContributors import enrolledContributors
 from constants import LANG
@@ -15,7 +15,6 @@ URL_RECORDED = f"https://commonvoice.mozilla.org/api/v1/{LANG}/clips/leaderboard
 
 class Data:
     def __init__(self) -> None:
-        # def __init__(self, **kwargs):
         self.validatedApiResonseContent = None
         self.recordedApiResonseContent = None
 
@@ -53,11 +52,11 @@ def writeWebsite(sortedContribList):
     utcnow = datetime.datetime.utcnow()
     date_time = utcnow.strftime("%d.%m.%y %H:%M")
     HTML1 = """<!DOCTYPE html>
-    <html lang="en">
+    <html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Common Voice Competition Leaderboard</title>
     </head>
     <body>
     <ul>
