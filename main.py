@@ -6,8 +6,8 @@ import logging
 import time
 from Contributor import Contributor
 from enrolledContributors import enrolledContributors
+from constants import LANG
 
-LANG = 'de'
 
 URL_VALIDATED = f"https://commonvoice.mozilla.org/api/v1/{LANG}/clips/votes/leaderboard?cursor=[1,23565]"
 URL_RECORDED = f"https://commonvoice.mozilla.org/api/v1/{LANG}/clips/leaderboard?cursor=[1,23565]"
@@ -34,33 +34,15 @@ class Data:
 
     def buildDashboard(self) -> None:
         pass
-        # print('ok')
         for contributor in enrolledContributors:
-            # print(i.username)
-            # repr(i)
             for j in self.recordedApiResonseContent:
-                # print(i)
                 if j["username"] == contributor.username:
-                    # print(j["username"])
                     contributor.currentRecordedClips = j.get("total")
             for j in self.validatedApiResonseContent:
-                # print(i)
                 if j["username"] == contributor.username:
-                    # print(j["username"])
                     contributor.currentValidatedClips = j.get("total")
-                    # i.currentValidatedClips
-                    # i.currentValidatedClips
             contributor.populateDeltas()
             contributor.populateScore()
-            # for i in data:
-            # user = i["username"]
-            # if user in contributorsCompetition.USERS:
-            #     # user contributorsCompetition.USERS2[user]
-            #     for j in contributorsCompetition.USERS2:
-            #         if j["user"] == user:
-            #             oldContrib = j["contrib"]
-            #             delta = i["total"] - oldContrib
-            #             o.append({'user': user, 'delta': delta})
 
     def buildRanking(self) -> None:
         return sorted(
@@ -105,5 +87,4 @@ if __name__ == "__main__":
     data.buildDashboard()
     data.buildRanking()
     sortedContribList = data.buildRanking()
-    # print(sortedContribList)
     writeWebsite(sortedContribList)
