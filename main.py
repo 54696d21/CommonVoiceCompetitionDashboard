@@ -9,6 +9,7 @@ from enrolledContributors import enrolledContributors
 from constants import LANG
 
 
+"https://commonvoice.mozilla.org/api/v1/de/clips/votes/leaderboard?cursor=[1,23565]"
 URL_VALIDATED = f"https://commonvoice.mozilla.org/api/v1/{LANG}/clips/votes/leaderboard?cursor=[1,23565]"
 URL_RECORDED = f"https://commonvoice.mozilla.org/api/v1/{LANG}/clips/leaderboard?cursor=[1,23565]"
 
@@ -59,9 +60,12 @@ def writeWebsite(sortedContribList):
         <title>Common Voice Competition Leaderboard</title>
     </head>
     <body>
-    <ul>
+    <table border="1" style = "width:50%; border:1px solid #000000"; border-collapse:collapse>
+    
+    <tr>
     """
-    HTML2 = """</ul>
+    HTML2 = """  </tr>
+    </table>
     </body>
     </html>"""
     HTML3 = f"""<footer>
@@ -74,7 +78,7 @@ def writeWebsite(sortedContribList):
 
         for idx, contributor in enumerate(sortedContribList):
             htmlout.write(
-                f"<li>{idx+1}. {contributor.username} | {contributor.competitionScore} Punkte</li>\n")
+                f"<tr><td>{idx+1}</td><td>{contributor.username}</td><td>{contributor.competitionScore}</td></tr>")
 
         htmlout.write(HTML2)
         htmlout.write(HTML3)
@@ -87,3 +91,6 @@ if __name__ == "__main__":
     data.buildRanking()
     sortedContribList = data.buildRanking()
     writeWebsite(sortedContribList)
+
+
+# <table style = "width:100%" >
