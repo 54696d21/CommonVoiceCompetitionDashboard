@@ -117,7 +117,7 @@ def writeWebsite(sortedContribList):
 
 </head>
 <body>
-  <img src="cv-banner.png">
+  <img src="https://i.imgur.com/wHxnc4h.png">
 
   <h1>Topliste der Common Voice Spenden Challenge Mai 2021</h1>
   <p>Willkommen auf dem Leaderboard der Common Voice Spenden Challenge. Hier tracken wir einen Monat lang wer wieviel spendet und die Plätze 1-20 erhalten als Dankeschön Sticker zugeschickt. </p>
@@ -147,7 +147,7 @@ def writeWebsite(sortedContribList):
 
         for idx, contributor in enumerate(sortedContribList):
             htmlout.write(
-                f"<tr><td>{idx+1}</td><td>{contributor.username}</td> <td>{contributor.currentRecordedClips}</td> <td>{contributor.currentValidatedClips}</td> <td>{contributor.competitionScore}</td></tr>")
+                f"<tr><td>{idx+1}</td><td>{contributor.username}</td> <td>{contributor.recordedClipsDelta}</td> <td>{contributor.validatedClipsDelta}</td> <td>{contributor.competitionScore}</td></tr>")
 
         htmlout.write(HTML2)
         htmlout.write(HTML3)
