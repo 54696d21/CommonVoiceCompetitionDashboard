@@ -2,10 +2,10 @@ import requests
 import json
 import datetime
 from Contributor import Contributor
-from enrolledContributors import enrolledContributors
-from constants import LANG
+from enrolledContributorsDE import enrolledContributors
 from jinja2 import Environment, FileSystemLoader
 
+LANG = "de"
 
 # https://commonvoice.mozilla.org/api/v1/de/clips/votes/leaderboard?cursor=[1,23565]
 # https://commonvoice.mozilla.org/api/v1/de/clips/leaderboard?cursor=[1,23565]
@@ -53,16 +53,16 @@ def writeWebsite(sortedContribList):
     date_time = now.strftime("%d.%m.%y %H:%M")
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
-    template = env.get_template('index.html')
+    template = env.get_template('indexDE.html')
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
       scoreTableData.append({
-        "index": idx+1,
-        "username":contributor.username,
-        "recordedClips": contributor.recordedClipsDelta,
-        "validatedClips": contributor.validatedClipsDelta,
-        "score": contributor.competitionScore,
+          "index": idx+1,
+          "username": contributor.username,
+          "recordedClips": contributor.recordedClipsDelta,
+          "validatedClips": contributor.validatedClipsDelta,
+          "score": contributor.competitionScore,
       })
 
     content = {
@@ -71,9 +71,9 @@ def writeWebsite(sortedContribList):
     }
 
     OUT_FOLDER = 'website'
-    output = template.render(content=content)
-    with open(f"{OUT_FOLDER}/index.html", "w") as f:
-      f.write(output)
+    htmlout = template.render(content=content)
+    with open(f"{OUT_FOLDER}/indexDE.html", "w") as f:
+      f.write(htmlout)
 
 
 if __name__ == "__main__":

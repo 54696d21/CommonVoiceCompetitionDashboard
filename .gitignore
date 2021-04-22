@@ -12,3 +12,4 @@ __pycache__
 .env
 .idea
 website
+v*.py

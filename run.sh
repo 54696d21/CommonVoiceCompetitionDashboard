@@ -1,6 +1,6 @@
 cd $HOME/code/commonVoiceCompetition
-python3 main.py
-python3 mainEsperanto.py
+python3 mainDE.py
+python3 mainEO.py
 sleep 2
 cd website
 git add *.html
