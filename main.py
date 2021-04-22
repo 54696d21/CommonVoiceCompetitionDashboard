@@ -121,7 +121,7 @@ def writeWebsite(sortedContribList):
 
   <h1>Topliste der Common Voice Spenden Challenge Mai 2021</h1>
   <p>Willkommen auf dem Leaderboard der Common Voice Spenden Challenge. Hier tracken wir einen Monat lang wer wieviel spendet und die Plätze 1-20 erhalten als Dankeschön Sticker zugeschickt. </p>
-  <p>Wenn auch Du in der Liste auftauchen und beider Challenge mitmachen willst willst dann brauchst Du ein Profil auf <a href="https://commonvoice.mozilla.org/de">commonvoice.mozilla.org/de</a> und das Profil muss auf "sichtbar" gestellt sein. Schick uns deinen Benutzernamen entweder über <a href="">dieses Formular</a> oder auf <a href="">Discord</a>. </p>
+  <p>Wenn auch Du in der Liste auftauchen und beider Challenge mitmachen willst willst dann brauchst Du ein Profil auf <a href="https://commonvoice.mozilla.org/de">commonvoice.mozilla.org/de</a> und das Profil muss auf "sichtbar" gestellt sein. Schick uns deinen Benutzernamen entweder über <a href="">dieses Formular</a> oder im <a href="https://discourse.mozilla.org/c/voice/239">Mozilla Forum</a>. </p>
   <p>Du kannst deine Stimme spenden oder die Aufnahmen von anderen kontrollieren. Benutze die <a href="https://commonvoice.mozilla.org/de">Webseite</a> oder die Android App (<a href="https://f-droid.org/de/packages/org.commonvoice.saverio/">F-Droid</a> / <a href="https://play.google.com/store/apps/details?id=org.commonvoice.saverio">Play Store</a>). Außerdem lohnt es sich immer die <a href="https://discourse.mozilla.org/t/vorlaufige-richtlinien-fur-das-validieren-von-satzen/62328">Richtlinien für das Validieren</a> zu lesen.  </p>
   <table>
     
