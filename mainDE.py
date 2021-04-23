@@ -72,7 +72,7 @@ def writeWebsite(sortedContribList):
 
     OUT_FOLDER = 'website'
     htmlout = template.render(content=content)
-    with open(f"{OUT_FOLDER}/indexDE.html", "w") as f:
+    with open(f"{OUT_FOLDER}/de/index.html", "w") as f:
       f.write(htmlout)
 
 
