@@ -57,13 +57,14 @@ def writeWebsite(sortedContribList):
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
-      scoreTableData.append({
-          "index": idx+1,
-          "username": contributor.username,
-          "recordedClips": contributor.recordedClipsDelta,
-          "validatedClips": contributor.validatedClipsDelta,
-          "score": contributor.competitionScore,
-      })
+        print(f"{idx+1=} {contributor.username=}")
+        scoreTableData.append({
+            "index": idx+1,
+            "username": contributor.username,
+            "recordedClips": contributor.recordedClipsDelta,
+            "validatedClips": contributor.validatedClipsDelta,
+            "score": contributor.competitionScore,
+        })
 
     content = {
         "scoreboardTable": scoreTableData,
