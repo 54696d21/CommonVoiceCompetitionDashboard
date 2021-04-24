@@ -1,6 +1,7 @@
 cd $HOME/code/commonVoiceCompetition
 python3 mainDE.py
 python3 mainEO.py
+cp templates/rootIndex.html website/index.html
 sleep 2
 cd website
 git add *
