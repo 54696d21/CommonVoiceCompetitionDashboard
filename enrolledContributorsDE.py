@@ -8,5 +8,8 @@ enrolledContributors = [
     Contributor(username="mkohler", clientHash="28982f1e9e2e76ebfdbb2af6c8380dbd6859a0d1543f2469a985b01189c03151",
                 validatedClipsBeginning=67, recordedClipsBeginning=15),
     Contributor(username="Jomosoto", clientHash="be8422cbfe73d00580dae1aa0ff0702ebb87a7dfcebf68ebd5bfbe6549442c11",
-                validatedClipsBeginning=1227, recordedClipsBeginning=10)
+                validatedClipsBeginning=1227, recordedClipsBeginning=10),
+    # Contributor(username="Mi_Ka", clientHash="", validatedClipsBeginning=, recordedClipsBeginning=),
+    # Contributor(username="UlrichG", clientHash="", validatedClipsBeginning=, recordedClipsBeginning=),
+    # Contributor(username="pdaiber", clientHash="", validatedClipsBeginning=, recordedClipsBeginning=)
 ]
