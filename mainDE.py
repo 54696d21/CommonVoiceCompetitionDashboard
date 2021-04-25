@@ -48,7 +48,7 @@ class Data:
 
 
 def writeWebsite(sortedContribList):
-    now = datetime.datetime.now()
+    now = datetime.datetime.now()+datetime.timedelta(hours=2)
     date_time = now.strftime("%d.%m.%y %H:%M")
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
