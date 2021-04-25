@@ -32,7 +32,6 @@ class Data:
             i["avatar_url"] = None
 
     def buildDashboard(self) -> None:
-        pass
         for contributor in enrolledContributors:
             for j in self.recordedApiResonseContent:
                 if j["username"] == contributor.username:
@@ -57,7 +56,7 @@ def writeWebsite(sortedContribList):
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
-        print(f"{idx+1} {contributor.username}")
+        print(f"pos:{idx+1} name:{contributor.username} validatedClipsDelta:{contributor.validatedClipsDelta} recordedClipsDelta:{contributor.recordedClipsDelta}")
         scoreTableData.append({
             "index": idx+1,
             "username": contributor.username,
