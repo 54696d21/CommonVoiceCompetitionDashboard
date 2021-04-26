@@ -32,7 +32,6 @@ class Data:
             i["avatar_url"] = None
 
     def buildDashboard(self) -> None:
-        pass
         for contributor in enrolledContributors:
             for j in self.recordedApiResonseContent:
                 if j["username"] == contributor.username:
@@ -49,7 +48,7 @@ class Data:
 
 
 def writeWebsite(sortedContribList):
-    now = datetime.datetime.now()
+    now = datetime.datetime.utcnow()+datetime.timedelta(hours=2)
     date_time = now.strftime("%d.%m.%y %H:%M")
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
@@ -57,13 +56,14 @@ def writeWebsite(sortedContribList):
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
-      scoreTableData.append({
-          "index": idx+1,
-          "username": contributor.username,
-          "recordedClips": contributor.recordedClipsDelta,
-          "validatedClips": contributor.validatedClipsDelta,
-          "score": contributor.competitionScore,
-      })
+        print(f"pos:{idx+1} name:{contributor.username} validatedClipsDelta:{contributor.validatedClipsDelta} recordedClipsDelta:{contributor.recordedClipsDelta}")
+        scoreTableData.append({
+            "index": idx+1,
+            "username": contributor.username,
+            "recordedClips": contributor.recordedClipsDelta,
+            "validatedClips": contributor.validatedClipsDelta,
+            "score": contributor.competitionScore,
+        })
 
     content = {
         "scoreboardTable": scoreTableData,
@@ -72,7 +72,7 @@ def writeWebsite(sortedContribList):
 
     OUT_FOLDER = 'website'
     htmlout = template.render(content=content)
-    with open(f"{OUT_FOLDER}/indexDE.html", "w") as f:
+    with open(f"{OUT_FOLDER}/de/index.html", "w") as f:
       f.write(htmlout)
 
 

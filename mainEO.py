@@ -49,7 +49,7 @@ class Data:
 
 
 def writeWebsite(sortedContribList):
-    now = datetime.datetime.now()
+    now = datetime.datetime.utcnow()+datetime.timedelta(hours=2)
     date_time = now.strftime("%d.%m.%y %H:%M")
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
@@ -72,7 +72,7 @@ def writeWebsite(sortedContribList):
 
     OUT_FOLDER = 'website'
     htmlout = template.render(content=content)
-    with open(f"{OUT_FOLDER}/indexEO.html", "w") as f:
+    with open(f"{OUT_FOLDER}/eo/index.html", "w") as f:
       f.write(htmlout)
 
 

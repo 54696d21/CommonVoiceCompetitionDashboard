@@ -11,22 +11,16 @@ class Contributor(object):
         self.competitionScore = None
 
     def populateDeltas(self) -> None:
-        # print(f'{self.username=}')
-        # print(f'{self.currentValidatedClips=}')
-        # print(f'{self.validatedClipsBeginning=}')
-        # print(f'{self.currentRecordedClips=}')
-        # print(f'{self.recordedClipsBeginning=}')
-        # self.validatedClipsDelta = self.currentValidatedClips - self.validatedClipsBeginning
-        # self.recordedClipsDelta = self.currentRecordedClips - self.recordedClipsBeginning
         try:
             self.validatedClipsDelta = self.currentValidatedClips - self.validatedClipsBeginning
         except TypeError:
+            print(f"{self.username} validatedClipsDelta threw error, so setting to 0")
             self.validatedClipsDelta = 0
         try:
             self.recordedClipsDelta = self.currentRecordedClips - self.recordedClipsBeginning
         except TypeError:
+            print(f"{self.username} recordedClipsDelta threw error, so setting to 0")
             self.recordedClipsDelta = 0
-        
 
     def populateScore(self) -> None:
         self.competitionScore = (
