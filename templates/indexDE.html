@@ -55,11 +55,20 @@
       }
 
       @media screen and (max-width: 600px) {
-        td:nth-child(3),
-        th:nth-child(3),
-        td:nth-child(4),
-        th:nth-child(4) {
-          display: none;
+       @media screen and (max-width: 600px) {
+        th {
+          font-size: medium;
+        border: 1px solid #eee;
+        text-align: left;
+        padding: 5px 4px;
+        background-color: black;
+        color: #fff;
+      }
+      td {
+        font-size: medium;
+        border: 1px solid #eee;
+        padding: 2px 4px;
+      }
         }
       }
     </style>
@@ -101,7 +110,8 @@
       >
       zu lesen.
     </p>
-    <p>Diese Liste wird am 1. Mai auf Null gesetzt werden!</p>
+    <p>Diese Liste wird am 1. Mai auf Null gesetzt werden! Für den Score zählen Aufnahmen 1x und Validierungen 0,5x.</p>
+   
     <table>
       <tr>
         <th>#</th>
