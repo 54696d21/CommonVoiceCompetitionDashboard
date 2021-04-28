@@ -2,6 +2,21 @@ import LangListSpeech
 import json
 import requests
 
+
+HTML1 = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+"""
+
+HTML2 = """</body>
+</html>
+"""
+
 if __name__ == "__main__":
 
     reqData = requests.get(
@@ -26,7 +41,9 @@ if __name__ == "__main__":
 
     if len(b) > 0:
         with open("website/new_supported/index.html", "w") as f:
+            f.write(HTML1)
             f.write(str(b))
+            f.write(HTML2)
         for i in b:
             c = j["launched"]
             # for e in c:
