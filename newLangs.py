@@ -1,6 +1,7 @@
 import LangListSpeech
 import json
 import requests
+import datetime
 
 
 HTML1 = """<!DOCTYPE html>
@@ -11,9 +12,12 @@ HTML1 = """<!DOCTYPE html>
     <title>Document</title>
 </head>
 <body>
+<p>
 """
 
-HTML2 = """</body>
+HTML2 = """
+</p>
+</body>
 </html>
 """
 
@@ -39,22 +43,30 @@ if __name__ == "__main__":
         # print(langCode)
         b.remove(langCode)
 
-    if len(b) > 0:
-        with open("website/new_supported/index.html", "w") as f:
-            f.write(HTML1)
+    with open("website/new_supported/index.html", "w") as f:
+        f.write(HTML1)
+
+        if len(b) > 0:
             f.write(str(b))
-            f.write(HTML2)
-        for i in b:
-            c = j["launched"]
-            # for e in c:
-            #     if e[""]
-            #     print(e)
-            # for j in c:
+            f.write("<p></p>")
+            for i in b:
+                c = j["launched"]
+
+                # for e in c:
+                #     if e[""]
+                #     print(e)
+                # for j in c:
                 # print(j)
                 # c = reqData
                 # print(c)
-    else:
-        print("probably no new languages added")
+        else:
+            print("probably no new languages added")
+
+        now = datetime.datetime.utcnow()+datetime.timedelta(hours=2)
+        date_time = now.strftime("%d.%m.%y %H:%M")
+
+        f.write(f"\nlast updated: {date_time}")
+        f.write(HTML2)
 
     # langCode = list(langArray.values())[0]
     # langName = list(langArray.keys())[0]
