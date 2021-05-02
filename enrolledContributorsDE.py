@@ -15,5 +15,6 @@ enrolledContributors = [
     Contributor(username="pdaiber", clientHash="",validatedClipsBeginning=0, recordedClipsBeginning=0),
     Contributor(username="PFischbeck", clientHash="3dfe84932a8a9cc8ffe8a6b2a38f86239cfe39776bef390255311e1e22f07068",
                 validatedClipsBeginning=329, recordedClipsBeginning=0),
-    Contributor(username="OZ", clientHash="",validatedClipsBeginning=0, recordedClipsBeginning=0)
+    Contributor(username="OZ", clientHash="50babbbe58a1f6f47268fdcdfc092f1faecdabbb21f3bff3b9fb6b13afc0483c",
+                validatedClipsBeginning=126, recordedClipsBeginning=135)
 ]
