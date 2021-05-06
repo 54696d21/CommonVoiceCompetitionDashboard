@@ -21,5 +21,9 @@ enrolledContributors = [
     Contributor(username="schtiehve", clientHash="875164dfb387623eec2c602404a47edec1aa3db20db9edbc319579725262cd76",
                 validatedClipsBeginning=62, recordedClipsBeginning=25),
     Contributor(username="TeachANies", clientHash="",
-                validatedClipsBeginning=0, recordedClipsBeginning=0)
+                validatedClipsBeginning=0, recordedClipsBeginning=0),
+    Contributor(username="xuiqzy", clientHash="dc9a8a0d43bfd69fa1889ffbebff7ff6464510d72f4610acc05a09af24d27c04",
+                validatedClipsBeginning=715, recordedClipsBeginning=321)
+    # ,    Contributor(username="", clientHash="",
+    #                  validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
