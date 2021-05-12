@@ -38,11 +38,11 @@ enrolledContributors = [
     Contributor(username="HerrYoshi", clientHash="e98beb8c2ee7c7362219f1dfbb396d12befa5189e6de86536cf5f253f7fa4e1b",
                 validatedClipsBeginning=25, recordedClipsBeginning=40),
     Contributor(username="hanswurst", clientHash="d5cdae8b62bb49a4dc2a803ffd7f6e1ff60301f3854e4166d448ef3e8e6d9254",
-                validatedClipsBeginning=12, recordedClipsBeginning=5)
-    ,    Contributor(username="sven", clientHash="3c60cc8d01b70cc2fe466309b86481db211cb22d200b711569f4fb6a20d2206a",
-                     validatedClipsBeginning=10, recordedClipsBeginning=20)
-    ,    Contributor(username="phrogg", clientHash="",
-                     validatedClipsBeginning=0, recordedClipsBeginning=0)
+                validatedClipsBeginning=12, recordedClipsBeginning=5),
+    Contributor(username="sven-challenge", clientHash="30f9d2e3c06003aafe86c590d621a65f280a1641c81628dac04fcfaa276f22d7",
+                validatedClipsBeginning=10, recordedClipsBeginning=0),
+    Contributor(username="phrogg", clientHash="",
+                validatedClipsBeginning=0, recordedClipsBeginning=0)
     # ,    Contributor(username="", clientHash="",
     #                  validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
