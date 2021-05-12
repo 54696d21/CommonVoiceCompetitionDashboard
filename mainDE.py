@@ -4,6 +4,7 @@ import datetime
 from Contributor import Contributor
 from enrolledContributorsDE import enrolledContributors
 from jinja2 import Environment, FileSystemLoader
+from termcolor import colored
 
 LANG = "de"
 
@@ -56,7 +57,8 @@ def writeWebsite(sortedContribList):
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
-        print(f"pos:{idx+1} name:{contributor.username} validatedClipsDelta:{contributor.currentValidatedClips}-{contributor.validatedClipsBeginning}={contributor.validatedClipsDelta} recordedClipsDelta:{contributor.recordedClipsDelta}")
+        infoString = f"pos:{idx+1} name:{contributor.username} validatedClipsDelta:{contributor.currentValidatedClips}-{contributor.validatedClipsBeginning}={contributor.validatedClipsDelta} recordedClipsDelta:{contributor.recordedClipsDelta}"
+        print(colored(infoString, 'green'))
         scoreTableData.append({
             "index": idx+1,
             "username": contributor.username,
@@ -73,7 +75,7 @@ def writeWebsite(sortedContribList):
     OUT_FOLDER = 'website'
     htmlout = template.render(content=content)
     with open(f"{OUT_FOLDER}/de/index.html", "w") as f:
-      f.write(htmlout)
+        f.write(htmlout)
 
 
 if __name__ == "__main__":

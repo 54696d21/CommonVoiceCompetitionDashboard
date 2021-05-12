@@ -1,3 +1,6 @@
+from termcolor import colored
+
+
 class Contributor(object):
     def __init__(self, **kwargs):
         self.username = kwargs.get("username", None)
@@ -14,12 +17,13 @@ class Contributor(object):
         try:
             self.validatedClipsDelta = self.currentValidatedClips - self.validatedClipsBeginning
         except TypeError:
-            print(f"{self.username} validatedClipsDelta threw error, so setting to 0")
+            print(colored(
+                f"{self.username} validatedClipsDelta threw error, so setting to 0", "red"))
             self.validatedClipsDelta = 0
         try:
             self.recordedClipsDelta = self.currentRecordedClips - self.recordedClipsBeginning
         except TypeError:
-            print(f"{self.username} recordedClipsDelta threw error, so setting to 0")
+            print(colored(f"{self.username} recordedClipsDelta threw error, so setting to 0", "red"))
             self.recordedClipsDelta = 0
 
     def populateScore(self) -> None:
