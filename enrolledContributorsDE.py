@@ -39,6 +39,8 @@ enrolledContributors = [
                 validatedClipsBeginning=25, recordedClipsBeginning=40),
     Contributor(username="hanswurst", clientHash="d5cdae8b62bb49a4dc2a803ffd7f6e1ff60301f3854e4166d448ef3e8e6d9254",
                 validatedClipsBeginning=12, recordedClipsBeginning=5)
+    ,    Contributor(username="sven", clientHash="3c60cc8d01b70cc2fe466309b86481db211cb22d200b711569f4fb6a20d2206a",
+                     validatedClipsBeginning=40, recordedClipsBeginning=20)
     # ,    Contributor(username="", clientHash="",
     #                  validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
