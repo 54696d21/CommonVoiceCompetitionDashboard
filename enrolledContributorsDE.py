@@ -43,6 +43,8 @@ enrolledContributors = [
                 validatedClipsBeginning=10, recordedClipsBeginning=0),
     Contributor(username="phrogg", clientHash="",
                 validatedClipsBeginning=0, recordedClipsBeginning=0)
+    ,    Contributor(username="bruno.fischer", clientHash="aa4f3277d6abf6058e630e0c49645e8c4a3ed4632c66d8d0ca8b9c4eae64e8e8",
+                     validatedClipsBeginning=23966, recordedClipsBeginning=10280)
     # ,    Contributor(username="", clientHash="",
     #                  validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
