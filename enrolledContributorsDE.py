@@ -11,7 +11,7 @@ enrolledContributors = [
                 validatedClipsBeginning=1581, recordedClipsBeginning=10),
     Contributor(username="Mi_Ka", clientHash="d2d63bdfa92d5e13b91f7bf92e55deb34b1cb943fb98f354a869f962cdbe9f6d",
                 validatedClipsBeginning=0, recordedClipsBeginning=35),
-    Contributor(username="UlrichG", clientHash="",
+    Contributor(username="UlrichG", clientHash="49477f1e3ee70de2af4c1b0b3a965138708ea37d9a5225f2bdcef21d0528a703",
                 validatedClipsBeginning=0, recordedClipsBeginning=0),
     Contributor(username="pdaiber", clientHash="287dda1cad6a3ee37af0e3b47d576bd9b177ffc549dca8df6d167a8523885953",
                 validatedClipsBeginning=0, recordedClipsBeginning=0),
@@ -44,9 +44,9 @@ enrolledContributors = [
     Contributor(username="phrogg", clientHash="",
                 validatedClipsBeginning=0, recordedClipsBeginning=0),
     Contributor(username="bruno.fischer", clientHash="aa4f3277d6abf6058e630e0c49645e8c4a3ed4632c66d8d0ca8b9c4eae64e8e8",
-                validatedClipsBeginning=23966, recordedClipsBeginning=10280)
-    ,    Contributor(username="Sauerkrautboii", clientHash="dec0544c8fc7bf9d79949754c999342e9dd21365a5afa92fd03129f8af56b0fb",
-                     validatedClipsBeginning=45, recordedClipsBeginning=40)
+                validatedClipsBeginning=23966, recordedClipsBeginning=10280),
+    Contributor(username="Sauerkrautboii", clientHash="dec0544c8fc7bf9d79949754c999342e9dd21365a5afa92fd03129f8af56b0fb",
+                validatedClipsBeginning=45, recordedClipsBeginning=40)
     # ,    Contributor(username="", clientHash="",
     #                  validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
