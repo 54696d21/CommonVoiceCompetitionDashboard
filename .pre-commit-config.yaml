@@ -24,10 +24,14 @@ repos:
       - id: black
         args:
           - --line-length=150
-  -   repo: https://github.com/pre-commit/mirrors-mypy
-      rev: ''  # Use the sha / tag you want to point at
-      hooks:
-      -   id: mypy
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: "" # Use the sha / tag you want to point at
+  #   hooks:
+  #     - id: mypy
+  - repo: https://github.com/doublify/pre-commit-isort
+    rev: v4.3.0
+    hooks:
+      - id: isort
 # repos:
 #   - repo: https://github.com/pre-commit/pre-commit-hooks
 #     rev: v3.4.0

@@ -17,18 +17,26 @@ class Contributor(object):
         try:
             self.validatedClipsDelta = self.currentValidatedClips - self.validatedClipsBeginning
         except TypeError:
-            print(colored(
-                f"{self.username} validatedClipsDelta threw error, so setting to 0", "red"))
+            print(
+                colored(
+                    f"{self.username} validatedClipsDelta threw error, so setting to 0",
+                    "red",
+                )
+            )
             self.validatedClipsDelta = 0
         try:
             self.recordedClipsDelta = self.currentRecordedClips - self.recordedClipsBeginning
         except TypeError:
-            print(colored(f"{self.username} recordedClipsDelta threw error, so setting to 0", "red"))
+            print(
+                colored(
+                    f"{self.username} recordedClipsDelta threw error, so setting to 0",
+                    "red",
+                )
+            )
             self.recordedClipsDelta = 0
 
     def populateScore(self) -> None:
-        self.competitionScore = (
-            0.5 * self.validatedClipsDelta) + self.recordedClipsDelta
+        self.competitionScore = (0.5 * self.validatedClipsDelta) + self.recordedClipsDelta
 
     def __repr__(self):
         return str(self.__dict__)

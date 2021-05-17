@@ -1,1 +1,1 @@
-LANG = 'de'
+LANG = "de"

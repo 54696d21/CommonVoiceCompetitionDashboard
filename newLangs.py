@@ -1,8 +1,8 @@
-import LangListSpeech
-import json
-import requests
 import datetime
+import json
 
+import LangListSpeech
+import requests
 
 HTML1 = """<!DOCTYPE html>
 <html lang="en">
@@ -23,9 +23,7 @@ HTML2 = """
 
 if __name__ == "__main__":
 
-    reqData = requests.get(
-        "https://commonvoice.mozilla.org/api/v1/language_stats"
-    ).content
+    reqData = requests.get("https://commonvoice.mozilla.org/api/v1/language_stats").content
 
     j = json.loads(reqData)
     # print(j)
@@ -62,7 +60,7 @@ if __name__ == "__main__":
         else:
             print("probably no new languages added")
 
-        now = datetime.datetime.utcnow()+datetime.timedelta(hours=2)
+        now = datetime.datetime.utcnow() + datetime.timedelta(hours=2)
         date_time = now.strftime("%d.%m.%y %H:%M")
 
         f.write(f"\nlast updated: {date_time}")

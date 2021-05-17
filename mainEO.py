@@ -1,6 +1,7 @@
-import requests
-import json
 import datetime
+import json
+
+import requests
 from Contributor import Contributor
 from enrolledContributorsEO import enrolledContributors
 from jinja2 import Environment, FileSystemLoader
@@ -45,35 +46,37 @@ class Data:
 
     def buildRanking(self) -> None:
         return sorted(
-            enrolledContributors, key=lambda contributor: contributor.competitionScore, reverse=True)
+            enrolledContributors,
+            key=lambda contributor: contributor.competitionScore,
+            reverse=True,
+        )
 
 
 def writeWebsite(sortedContribList):
-    now = datetime.datetime.utcnow()+datetime.timedelta(hours=2)
+    now = datetime.datetime.utcnow() + datetime.timedelta(hours=2)
     date_time = now.strftime("%d.%m.%y %H:%M")
-    file_loader = FileSystemLoader('templates')
+    file_loader = FileSystemLoader("templates")
     env = Environment(loader=file_loader)
-    template = env.get_template('indexEO.html')
+    template = env.get_template("indexEO.html")
     scoreTableData = list()
 
     for idx, contributor in enumerate(sortedContribList):
-      scoreTableData.append({
-          "index": idx+1,
-          "username": contributor.username,
-          "recordedClips": contributor.recordedClipsDelta,
-          "validatedClips": contributor.validatedClipsDelta,
-          "score": contributor.competitionScore,
-      })
+        scoreTableData.append(
+            {
+                "index": idx + 1,
+                "username": contributor.username,
+                "recordedClips": contributor.recordedClipsDelta,
+                "validatedClips": contributor.validatedClipsDelta,
+                "score": contributor.competitionScore,
+            }
+        )
 
-    content = {
-        "scoreboardTable": scoreTableData,
-        "timestamp": date_time
-    }
+    content = {"scoreboardTable": scoreTableData, "timestamp": date_time}
 
-    OUT_FOLDER = 'website'
+    OUT_FOLDER = "website"
     htmlout = template.render(content=content)
     with open(f"{OUT_FOLDER}/eo/index.html", "w") as f:
-      f.write(htmlout)
+        f.write(htmlout)
 
 
 if __name__ == "__main__":
