@@ -151,5 +151,9 @@ enrolledContributors = [
         validatedClipsBeginning=10,
         recordedClipsBeginning=0,
     ),
+    Contributor(username="pmayd",
+                clientHash="b9581109d707ee4ca4147cc3e6b9b4b5db4586c2b4052446e68c038e09959724",
+                validatedClipsBeginning=6,
+                recordedClipsBeginning=0)
     # Contributor(username="", clientHash="", validatedClipsBeginning=0, recordedClipsBeginning=0)
 ]
