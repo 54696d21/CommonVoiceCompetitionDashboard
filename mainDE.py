@@ -77,7 +77,16 @@ def writeWebsite(sortedContribList):
         f.write(htmlout)
 
 
+def check_has_ended():
+    COMPETITION_END = datetime.datetime(2021, 6, 1, 2, 0)
+    now = datetime.datetime.utcnow() + datetime.timedelta(hours=2)
+    if now > COMPETITION_END:
+        print("this competition ended, the scores won't be updated anymore")
+        exit(0)
+
+
 if __name__ == "__main__":
+    check_has_ended()
     data = Data()
     data.fetchDataFromApi()
     data.buildDashboard()
